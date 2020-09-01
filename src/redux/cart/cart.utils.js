@@ -6,7 +6,7 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
   if (existingCartItem) {
     //return new array so component renders properly
     return cartItems.map((cartItem) =>
-      cartItem.id == cartItemToAdd.id
+      cartItem.id === cartItemToAdd.id
         ? { ...cartItem, quantity: cartItem.quantity + 1 }
         : cartItem
     );
